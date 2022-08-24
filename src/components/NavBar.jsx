@@ -4,7 +4,7 @@ import CartWidget from './CartWidget'
 
 const Navbar = () => {
     return (
-        <nav class="navbar bg-dark d-flex justify-center align-items-center">
+        <nav class="navbar sticky-top bg-dark d-flex justify-center align-items-center">
           <div class="container col-lg-8 ">
             <a class="navbar-brand text-white " href="">
               <img src={logo} alt="" width="40" class="d-inline-block"/>
