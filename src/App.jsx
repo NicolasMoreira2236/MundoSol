@@ -5,6 +5,7 @@ import Navbar from './components/NavBar.jsx';
 
 
 
+
 function App() {
   return (
     <div className="App">
