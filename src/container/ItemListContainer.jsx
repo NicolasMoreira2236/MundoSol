@@ -1,13 +1,13 @@
 
-    const Itemlistcontainer = ({greeting}) => {
-        let contenido = greeting.contenido
+    const ItemListContainer = (props) => {
+        let contenido = props.contenido
         return ( 
-        <div>
+            <div>
             <h1>
             Hola mundovich.
             </h1> 
             {contenido}
-        </div>
-        )
+            </div>
+        ) 
     }
-    export default  Itemlistcontainer;
+    export default  ItemListContainer;
