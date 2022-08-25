@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const ItemListContainer = (props) => {
-        const {contenido} = props
+const ItemListContainer = (greeting) => {
+        const {contenido} = greeting
         return ( 
         <Greet>
             <div>
