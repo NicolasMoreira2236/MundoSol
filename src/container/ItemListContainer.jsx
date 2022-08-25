@@ -1,6 +1,6 @@
 
     const ItemListContainer = (props) => {
-        let contenido = props.contenido
+        const {contenido} = props
         return ( 
             <div>
             <h1>
