@@ -3,8 +3,8 @@
         const {contenido} = props
         return ( 
             <div>
-            <h1>
-            Hola mundovich.
+            <h1 class="text-center">
+            Hola Mundovich.
             </h1> 
             {contenido}
             </div>

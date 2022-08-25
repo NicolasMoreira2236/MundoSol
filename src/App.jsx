@@ -15,9 +15,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <p>Mundo Cosmetica Sol</p>
-        <a className="App-link" href="" target="_blank" rel="noopener noreferrer">
+        <button className="App-link" href="" target="_blank" rel="noopener noreferrer" class="border rounded px-5 py-2">
           Ingresa aqui!
-        </a>
+        </button>
       </header>
     </div>
   );

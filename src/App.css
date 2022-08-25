@@ -33,10 +33,25 @@ nav ul {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(56, 4, 43);
+  font-weight: bold;
+}
+.App-header button{
+
+  background-color: #ff0077;
+  color: rgb(252, 227, 245);
+  font-weight: bold;
 }
 
+
+
+
+
+
+
 .App-link {
-  color: #230de9;
+  background-color: #4b0439;
+  color: #f7c2f7;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
