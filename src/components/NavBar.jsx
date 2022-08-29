@@ -2,6 +2,7 @@
 import logo from '../logoestetica.png'
 import CartWidget from './CartWidget'
 
+
 const Navbar = () => {
     return (
         <nav class="navbar sticky-top bg-dark d-flex justify-center align-items-center">
