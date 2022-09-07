@@ -1,39 +1,34 @@
-import styled from 'styled-components';
-import ItemCount from '../components/ItemCount';
+import React, {useState, useEffect }from 'react';
+import productos from '../ArrayItem';
+import ItemList from '../components/itemList';
 
-const ItemListContainer = (greeting) => {
-        const {contenido} = greeting
 
-        const onAdd = (quantity) => {
-            console.log(`Compraste ${quantity} unidades`);
-        }
+const ItemListContainer = () => {
+   const [datos, setDatos] = useState ([]);
 
-        return ( 
-        <Greet>
+   useEffect (() => {   
+      const getData = new Promise (resolve => {
+        setTimeout (()=> {
+            resolve(productos)
+        },2000);
+    });
+        getData.then (respuesta => setDatos(respuesta));
+
+      },[]);
+        
+    return ( 
             <div>
                 <h1 class="text-center">
                     Bienvenidos a Mundo Cosmetica.
-                </h1> 
-                {contenido}
-                <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                </h1>
+                <ItemList arrayProductos={datos} /> 
             </div>
             
-        </Greet>
-        
-        
         ) 
         
     }
 
-    export default  ItemListContainer;
+export default  ItemListContainer;
 
 
-    const Greet = styled.div`
-
-    h1{
-        color: #cf1717;
-        background-color: black;
-        text-transform: uppercase;
-        text-transform: bold;
-        margin: 0;
-    }`
+    

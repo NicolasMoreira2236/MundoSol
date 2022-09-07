@@ -1,30 +1,14 @@
-import Item from "./item"
-import React, { useState,useEffect } from "react";
+import React from 'react';
+import Item from './item'
 
-const [carrito, SetCarrito] = useState([])
-const [productos, SetProductos] = useState([])
+export const ItemsList = ({arrayProductos = []})=>{
 
-const BuscarProductos = async() => {
-    try {
-        const response = await fetch('../src/ArrayItem.json')
-        const data = await response.json();
-        SetProductos(data.results);
-    }catch(e){
-    }
-}
-
-useEffect(() => { 
-    
-    BuscarProductos()}, [] )
-
-const ItemList = ({productos}) => {
-    return (
-    productos.map ((producto) => {
-        return (
-            <Item producto={producto}/>
-        );
-    })
+    return(
+      <div>
+          <div className="row">
+            {arrayProductos.map(objeto => <Item key={arrayProductos.id} info={objeto} />)}
+          </div>  
+      </div>
     )
 }
-
-export default ItemList;
+export default ItemsList;
