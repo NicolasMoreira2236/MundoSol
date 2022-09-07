@@ -4,17 +4,17 @@ import ItemList from '../components/itemList';
 
 
 const ItemListContainer = () => {
-   const [datos, setDatos] = useState ([]);
+    const [datos, setDatos] = useState ([]);
 
-   useEffect (() => {   
-      const getData = new Promise (resolve => {
+    useEffect (() => {   
+    const getData = new Promise (resolve => {
         setTimeout (()=> {
             resolve(productos)
         },2000);
     });
         getData.then (respuesta => setDatos(respuesta));
 
-      },[]);
+    },[]);
         
     return ( 
             <div>
