@@ -1,13 +1,14 @@
 import React from "react";
 
 
+
 const Item = ({info}) => {
     const {imagen, nombre, precio } = info
 
     return (
-        
-        <div className="card col-md-4 d-flex align-items-center">
-        <div className="text-center">
+      <div className= "col-md-4 d-flex justify-content-evenly text-center mt-5 mb-5 px-5 ">
+        <div className="card col-md-6 color-primary">
+        <div className="text-center color-primary">
           <div>
             <img src={imagen} className="text-center" width="300" alt={nombre}/>
           </div>
@@ -19,8 +20,12 @@ const Item = ({info}) => {
           </div>
         </div>
       </div>
+    </div>
       
     )
 
 }
 export default Item;
+
+
+
