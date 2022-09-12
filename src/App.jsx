@@ -2,6 +2,7 @@ import logo from './logoestetica.png';
 import './App.css';
 import Navbar from './components/NavBar.jsx';
 import ItemListContainer from './container/ItemListContainer';
+import ItemDetailContainer from './container/ItemDetailContainer';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <ItemListContainer/>
+      <ItemDetailContainer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <p>Mundo Cosmetica Sol</p>
