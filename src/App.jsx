@@ -1,24 +1,25 @@
+import React from 'react';
 import logo from './logoestetica.png';
 import './App.css';
 import Navbar from './components/NavBar.jsx';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <ItemListContainer/>
-      <ItemDetailContainer/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>Mundo Cosmetica Sol</p>
-        <button className="App-link" href="" target="_blank" rel="noopener noreferrer" class="border rounded px-5 py-2">
-          Ingresa aqui!
-        </button>
-      </header>
-    </div>
+
+    <BrowserRouter>
+        <Navbar/>
+          <Routes>
+            <Route excact path="/" element={ <ItemListContainer/> } />
+            <Route excact path="/categoria/:categoria" element={ <ItemListContainer/> } />
+            <Route excact path="/categoria/:id" element={ <ItemDetailContainer/> } />
+          </Routes>
+        <ItemListContainer/>
+    </BrowserRouter>
+
   );
 }
 export default App;
