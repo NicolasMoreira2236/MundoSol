@@ -23,7 +23,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="container-fluid ">
-                <h5 className="card-title text-center">Bienvenido</h5>
+                <h5 className="card-title text-center">Bienvenidos a Sol Estetica Online</h5>
                     <ItemList datos={datos} />
             </div>
 )
