@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     const {categoria}= useParams();
 
     useEffect (() => {   
-    fetch ('../main.json')
+    fetch ('../public/main.json')
     .then((res) => res.json())
     .then((json) => {
         if (categoria === undefined){

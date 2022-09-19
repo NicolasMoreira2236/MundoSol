@@ -13,13 +13,13 @@ function App() {
     <BrowserRouter>
         <Navbar/>
           <Routes>
-            <Route excact path="/" element={ <ItemListContainer/> } />
-            <Route excact path="/categoria/:categoria" element={ <ItemListContainer/> } />
-            <Route excact path="/categoria/:id" element={ <ItemDetailContainer/> } />
+            <Route exact path="/" element={<ItemListContainer/>} />
+            <Route exact path="/categoria/:categoria" element={ <ItemListContainer/> } />
+            <Route exact path="/categoria/:id" element={ <ItemDetailContainer/> } />
           </Routes>
         <ItemListContainer/>
     </BrowserRouter>
 
   );
 }
-export default App;
+export default App
