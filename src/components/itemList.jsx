@@ -1,12 +1,12 @@
 import React from 'react';
 import Item from './item'
 
-export const ItemsList = ({arrayProductos = []})=>{
-
+export const ItemsList = ({datos = []})=>{
+ console.log(datos)
     return(
       <div>
           <div className="row">
-            {arrayProductos.map(objeto => <Item key={arrayProductos.id} info={objeto} />)}
+            {datos.map(dato => <Item key={dato.id} info={dato} />)}
           </div>  
       </div>
     )
