@@ -1,31 +1,27 @@
 import React, {useState, useEffect} from 'react';
-import productos from '../ArrayItem';
 import ItemDetail from '../components/ItemDetail';
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = () => {
-    const [objeto, setObjeto] = useState({});
-    
-    useEffect(() => {
-        const getData =new Promise (resolve => {
-            const encontrado = productos.find((prod) => prod.id === 1);
-                setTimeout(() => {
-                resolve(encontrado)
-                }, 2000);
+export const ItemDetailContainer = () => {
+    const {id} = useParams();  
+    const [item, setItem]= useState({});
+
+        useEffect(() => {
+        fetch ('../main.json')
+            .then ((res) => res.json())
+            .then (json =>{
+                
+                const encontrado = json.find (item => item.id === parseInt(id));
+                setItem(encontrado) 
             });
-    
-            getData.then((info)=>{
-                setObjeto(info);
-            })
-        }, [])
+            
+    }, [id])
 
     return (
-            <div className="container-fluid ">
-                <div className="row d-flex justify-content-center">
-                    <h5 className="card-title text-center">Detalle de Producto</h5>
-                        <ItemDetail objeto={objeto} />
-                </div>
-            </div>
+        <div className="container d-flex justify-content-center">
+            <ItemDetail objeto={item}  />
+            
+        </div>
     )
- }
- export default ItemDetailContainer;
- 
+}
+export default ItemDetailContainer;

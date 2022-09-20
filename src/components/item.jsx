@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -16,6 +17,9 @@ const Item = ({info}) => {
             <div className="card-body">
               <h5 className="card-title card-titulo ">{nombre}</h5>
               <p className="card-text precio">$ {precio}</p>
+              <Link to={"/productos/" + id}>
+              <button>Ver Producto</button>
+              </Link>
             </div>
           </div>
         </div>
