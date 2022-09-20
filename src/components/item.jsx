@@ -3,7 +3,7 @@ import React from "react";
 
 
 const Item = ({info}) => {
-    const {imagen, nombre, precio } = info
+    const {id, imagen, nombre, precio } = info
 
     return (
       <div className= "col-md-4 d-flex justify-content-evenly text-center mt-5 mb-5 px-5 ">

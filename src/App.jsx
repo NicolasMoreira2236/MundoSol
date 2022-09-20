@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logoestetica.png';
+
 import './App.css';
 import Navbar from './components/NavBar.jsx';
 import ItemListContainer from './container/ItemListContainer';
@@ -13,12 +13,12 @@ function App() {
     <BrowserRouter>
         <Navbar/>
           <Routes>
-            <Route exact path="/" element={<ItemListContainer/>} />
-            <Route exact path="/categoria/:categoria" element={ <ItemListContainer/> } />
-            <Route exact path="/categoria/:id" element={ <ItemDetailContainer/> } />
+            <Route excact path="/" element={ <ItemListContainer/> } />
+            <Route excact path="/categoria/:categoria" element={ <ItemListContainer/> } />
+            <Route excact path="/categoria/:id" element={ <ItemDetailContainer/> } />
           </Routes>
     </BrowserRouter>
 
   );
 }
-export default App
+export default App;
