@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route excact path="/" element={ <ItemListContainer/> } />
             <Route excact path="/categoria/:categoria" element={ <ItemListContainer/> } />
-            <Route excact path="/categoria/:id" element={ <ItemDetailContainer/> } />
+            <Route excact path="/productos/:id" element={ <ItemDetailContainer/> } />
           </Routes>
     </BrowserRouter>
 
