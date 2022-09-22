@@ -18,7 +18,7 @@ const Item = ({info}) => {
               <h5 className="card-title card-titulo ">{nombre}</h5>
               <p className="card-text precio">$ {precio}</p>
               <Link to={"/productos/" + id}>
-              <button>Ver Productos</button>
+              <button >Ver</button>
               </Link>
             </div>
           </div>

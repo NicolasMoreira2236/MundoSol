@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../logoestetica.png'
 import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'  
 
 
 const Navbar = () => {
@@ -18,13 +18,13 @@ const Navbar = () => {
             </div>
             <ul className="navbar col-lg-3 text-white d-flex justify-content-around text-center">
               <li className="nav-item">
-              <Link className="nav-link text-danger" to="/">Inicio</Link>
+              <Link className="nav-link text-danger" to="/">INICO</Link>
               </li>
             <li className="nav-item">
-                <Link className="nav-link text-danger" to="/categoria/facial">Facial</Link>
+            <Link className="nav-link text-danger" to="/categoria/facial">Facial </Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link text-danger" to="/categoria/masajeador">Masajeador</Link>
+                <Link className="nav-link text-danger" to="/categoria/masajeador">Masajeador </Link>
             </li>
             <CartWidget />
             </ul>
