@@ -14,10 +14,10 @@ function App() {
     <BrowserRouter>
         <Navbar/>
           <Routes>
-            <Route excact path="/" element={ <ItemListContainer/> } />
-            <Route excact path="/categoria/:categoria" element={ <ItemListContainer/> } />
-            <Route excact path="/productos/:id" element={ <ItemDetailContainer/> } />
-            <Route excact path="/cart" element={ <Cart /> } />
+            <Route  path="/" element={ <ItemListContainer/> } />
+            <Route  path="/categoria/:categoria" element={ <ItemListContainer/> } />
+            <Route  path="/productos/:id" element={ <ItemDetailContainer/> } />
+            <Route  path="/cart" element={ <Cart /> } />
           </Routes>
     </BrowserRouter>
 
