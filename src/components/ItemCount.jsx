@@ -1,11 +1,7 @@
-import styled from 'styled-components';
 import React,{useState} from 'react';
 
 export const ItemCount = ({initial, stock, onAdd}) => {
     const [count, setCount] = useState(initial);
-   console.log (initial);
-   console.log (stock);
-
     const decrease = () => {
         setCount (count - 1);
     }

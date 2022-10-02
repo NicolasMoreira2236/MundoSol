@@ -12,9 +12,9 @@ const Navbar = () => {
             <div className="col-lg-4">
             <img src={logo} alt="" width="40" className="d-inline-block mx-3"/>
             
-            <a className="navbar-brand text-white text-center  align-middle" href="!#">
+            <Link className="navbar-brand text-white text-center  align-middle" to="/">
               Mundo Cosmetica
-            </a>
+            </Link>
             </div>
             <ul className="navbar col-lg-3 text-white d-flex justify-content-around text-center">
               <li className="nav-item">

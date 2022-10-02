@@ -23,6 +23,16 @@ nav ul {
     animation: App-logo-spin infinite 45s linear;
   }
 }
+.descripcion{
+  box-shadow: 3px 3px 15px 1px rgb(158, 158, 158);
+}
+.text{
+  font-size:.6rem;
+  font-weight:bold;
+}
+.material-icons{
+  cursor: pointer;
+}
 
 .App-header {
   background-color: #cc76b6;
@@ -56,12 +66,4 @@ nav ul {
     transform: rotate(360deg);
   }
 }
-
-
-/* .card{
-  
-  margin-left: 5rem;
-  margin-right: 5rem;
-} */
-
 
