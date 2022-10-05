@@ -6,7 +6,7 @@ import ItemCount from './ItemCount';
 
 
 const ItemDetail =({objeto})=>{
-  
+  console.log(objeto);
   const [irCarrito, setIrCarrito] = useState(false);
   const [cantidad, setCantidad] = useState(objeto.stock)
   const {AddItem} = useContext(CartContext)
@@ -14,13 +14,13 @@ const ItemDetail =({objeto})=>{
    
   const onAdd = (quantity)=> {
       setIrCarrito(true)
-      setCantidad(objeto.stock - quantity )
+      setCantidad(objeto.stock - quantity)
       AddItem(objeto, quantity);
 
     }
 
     useEffect(() => { 
-      setCantidad(objeto.stock);
+      setCantidad(objeto.stock)
   }, [objeto.stock]);
 
 
@@ -34,7 +34,7 @@ const ItemDetail =({objeto})=>{
         </div>
         <div className="card-body text-center">
           <h5 className="card-title">{objeto.nombre}</h5>
-          <p className="card-text text-center">$ {objeto.precio}</p>
+          <p className="card-text text-center">${objeto.precio}</p>
           <p className="card-text text-center">Cantidad: {cantidad} </p>
         </div>
         { irCarrito
