@@ -1,22 +1,25 @@
+import { collection, doc, getDoc } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../components/ItemDetail';
+import { db } from '../configuracionFirebase';
 
 export const ItemDetailContainer = () => {
    const {id} = useParams();  
    const [item, setItem]= useState({});
       
       
-      useEffect(() => {
-         fetch ('../main.json')
-            .then ((res) => res.json())
-            .then (json =>{
-                
-                const encontrado = json.find (item => item.id === id);
-                setItem(encontrado) 
-            });
-           
-      }, [id])
+   useEffect(() => {
+         
+      const colecionProductos = collection(db, 'productos') 
+      const refId = doc(colecionProductos, id); 
+      getDoc(refId)
+      .then((res) =>{
+            setItem({id:res.id, ...res.data(),})
+      })
+        
+   }, [id])
+
 
    return (
          <div className="container d-flex justify-content-center">
