@@ -35,7 +35,7 @@ const Cart =()=> {
               <h5 className="col-4 text-center total p-2 m-0  " > Total $  {TotalPrecio()}</h5>
               
              <span className="col-4 ">
-               <Link to="/formulario"><button type="button" className="btn "/> </Link>
+               <Link to="/formulario"><button type="button" className="btn "/>formulario </Link>
              </span>
              <span className="col-4 material-icons text-center " onClick={() => {ClearCart()}}>delete_forever</span>
             </div>

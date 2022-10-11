@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function CarritoVacio() {

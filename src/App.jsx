@@ -8,6 +8,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import CartProvider from './components/CartContext';
 import CartContainer from './components/CartContainer';
+import Form from '../src/components/Formulario';
+import Orden from './components/orden';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
             <Route path="/categoria/:categoria" element={ <ItemListContainer/> } />
             <Route path="/productos/:id" element={ <ItemDetailContainer/> } />
             <Route path="/cart" element={ <CartContainer/> } />
+            <Route path="/formulario" element={ <Form/> } />
+            <Route path="/formulario" element={ <Orden/> } />
           </Routes>
        </CartProvider>
     </BrowserRouter>
